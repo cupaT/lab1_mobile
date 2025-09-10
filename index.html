@@ -24,7 +24,7 @@
 <section id="hero">
     <div class="hero-content">
         <h1>Привет, я — Ревенко Данила</h1>
-        <p>Студент группы ФИТ-231.</p>
+        <p>Студент группы ФИТ-231</p>
         <a class="hero-btn" href="#portfolio">Смотреть работы</a>
     </div>
 </section>
@@ -42,25 +42,58 @@
 
     <section id="skills">
         <h2>Навыки</h2>
-        <ul>
-            <li>HTML</li>
-            <li>C++</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Kotlin</li>
-            <li>Java</li>
-        </ul>
+        <div class="skills-list">
+            <div class="skill-card">
+                <span>HTML</span>
+                <div class="bar"><div style="width:70%"></div></div>
+                <span class="level">Высокий</span>
+            </div>
+            <div class="skill-card">
+                <span>JavaScript</span>
+                <div class="bar"><div style="width:75%"></div></div>
+                <span class="level">Высокий</span>
+            </div>
+            <div class="skill-card">
+                <span>Python</span>
+                <div class="bar"><div style="width:95%"></div></div>
+                <span class="level">Продвинутый</span>
+            </div>
+            <div class="skill-card">
+                <span>Java</span>
+                <div class="bar"><div style="width:60%"></div></div>
+                <span class="level">Средний</span>
+            </div>
+        </div>
     </section>
 
     <section id="portfolio">
         <h2>Портфолио</h2>
-        <ul>
-            <li>Лабораторная работа по Python с потроением графиков времени — <a href="https://github.com/cupaT/labsSAOD" target="_blank">смотреть на GitHub</a></li>
-            <li>Приложение погоды на Java — <a href="https://github.com/cupaT/WeatherApp" target="_blank">смотреть на GitHub</a></li>
-            <li>Интерактивный гид по странам мира на JavaScript — <a href="https://github.com/cupaT/semestrovaya_JS" target="_blank">смотреть на GitHub</a></li>
-            <li>Telegram-бот справочник для путешественников — <a href="https://github.com/cupaT/semestrovaya_Py" target="_blank">смотреть на GitHub</a></li>
-
-        </ul>
+        <div class="portfolio-list">
+            <div class="portfolio-card">
+                <img src="images/project_weather.jpg" alt="WeatherApp" />
+                <div>
+                    <h3>Приложение погоды на Java</h3>
+                    <p>Android-приложение с прогнозом погоды и геолокацией.</p>
+                    <a href="https://github.com/cupaT/WeatherApp" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="images/project_guide.jpg" alt="Гид по странам" />
+                <div>
+                    <h3>Интерактивный гид по странам мира</h3>
+                    <p>Веб-приложение для изучения стран, их флагов и фактов.</p>
+                    <a href="https://github.com/cupaT/semestrovaya_JS" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="images/project_telegram.jpg" alt="Telegram-бот" />
+                <div>
+                    <h3>Telegram-бот справочник</h3>
+                    <p>Бот для путешественников с быстрым поиском информации.</p>
+                    <a href="https://github.com/cupaT/semestrovaya_Py" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="contacts">
@@ -76,7 +109,7 @@
 <footer>
     <span>Ревенко Данила, ФИТ-231, 2025</span>
     <nav>
-        <a href="#header">Наверх</a>
+        <a href="#hero">Наверх</a>
         <a href="https://github.com/cupaT/lab1_mobile" target="_blank">Репозиторий</a>
     </nav>
 </footer>
