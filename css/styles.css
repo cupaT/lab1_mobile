@@ -260,8 +260,7 @@ footer a {
     box-shadow: 0 2px 20px rgba(42,77,124,0.20);
     padding: 2.5rem 2rem 2rem 2rem;
     z-index: 2;
-    min-width: 270px;
-    max-width: 95vw;
+    width: 430px;
     max-height: 90vh;
     overflow-y: auto;
 }
