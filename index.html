@@ -12,6 +12,11 @@
         <img src="images/avatar.jpg" alt="Avatar" />
         <span>Ревенко Данила</span>
     </div>
+    <button class="burger" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     <nav>
         <ul>
             <li><a href="#about">О себе</a></li>
@@ -103,6 +108,7 @@
             <li>Телефон: <a href="tel:+71234567890">+7 (123) 456-78-90</a></li>
             <li>GitHub: <a href="https://github.com/cupaT" target="_blank">cupaT</a></li>
         </ul>
+        <button id="openContactModal" class="hero-btn" type="button" style="margin-top:1rem;">Обратная связь</button>
     </section>
 </main>
 
@@ -114,5 +120,29 @@
     </nav>
 </footer>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/main.js"></script>
 </body>
+<div class="modal" id="contactModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+        <button class="modal-close" aria-label="Закрыть">&times;</button>
+        <h2>Обратная связь</h2>
+        <form id="feedbackForm">
+            <label>
+                Имя:<br>
+                <input type="text" name="name" required autocomplete="off">
+            </label>
+            <label>
+                Email:<br>
+                <input type="email" name="email" required autocomplete="off">
+            </label>
+            <label>
+                Сообщение:<br>
+                <textarea name="message" rows="3" required></textarea>
+            </label>
+            <button type="submit">Отправить</button>
+        </form>
+        <div class="form-success" style="display:none;">Спасибо! Ваше сообщение отправлено.</div>
+    </div>
+</div>
 </html>
