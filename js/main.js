@@ -65,4 +65,65 @@ $(function() {
     function validateEmail(email) {
         return /^[\w\.-]+@[\w\.-]+\.\w{2,}$/.test(email);
     }
+    $.getJSON('data/portfolio.json', function(data) {
+        var $list = $('.portfolio-list');
+        $list.empty();
+        $.each(data, function(i, work) {
+            var $card = $(`
+                <div class="portfolio-card" style="display:none;">
+                    <img src="${work.image}" alt="${work.alt || work.title}">
+                    <div>
+                        <h3>${work.title}</h3>
+                        <p>${work.description}</p>
+                        <a href="${work.link}" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            `);
+            $list.append($card);
+            $card.fadeIn(350 + i * 120);
+        });
+    });
+
+    $(window).on('scroll', function() {
+        if ($(window).scrollTop() > 300) {
+            $('#toTopBtn').addClass('show');
+        } else {
+            $('#toTopBtn').removeClass('show');
+        }
+    });
+
+    $('#toTopBtn').on('click', function() {
+        $('html, body').animate({scrollTop: 0}, 600);
+    });
+
+    const sectionIds = ['#about', '#skills', '#portfolio', '#contacts'];
+    $(window).on('scroll', function () {
+        let scrollPos = $(window).scrollTop() + 120;
+        let currentSection = sectionIds[0];
+
+        for (let i = 0; i < sectionIds.length; i++) {
+            const id = sectionIds[i];
+            const $section = $(id);
+            if ($section.length) {
+                if (
+                    id === '#contacts' &&
+                    (
+                        $(window).scrollTop() + $(window).height() >=
+                        $(document).height() - 10 ||
+                        scrollPos >= $section.offset().top - 40
+                    )
+                ) {
+                    currentSection = id;
+                    break;
+                } else if (scrollPos >= $section.offset().top - 40) {
+                    currentSection = id;
+                }
+            }
+        }
+
+        $('nav a').removeClass('active');
+        $(`nav a[href="${currentSection}"]`).addClass('active');
+    });
+
+    $(window).trigger('scroll');
 });

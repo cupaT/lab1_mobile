@@ -315,6 +315,95 @@ footer a {
     text-align: center;
 }
 
+#toTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 32px;
+    right: 128px;
+    z-index: 100;
+    background: #2a4d7c;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(42,77,124,0.14);
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+#toTopBtn.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+#toTopBtn:hover {
+    background: #163056;
+}
+
+footer {
+    background: #2a4d7c;
+    color: #fff;
+    text-align: center;
+    padding: 1.3rem 0;
+    margin-top: 2rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    height: 64px;
+}
+
+.footer-main {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-main span {
+    font-size: 1.06rem;
+}
+
+.footer-repo-btn {
+    color: #fff;
+    background: #163056;
+    text-decoration: none;
+    padding: 0.45em 1.3em;
+    border-radius: 20px;
+    margin-left: 0.5em;
+    font-size: 1.01rem;
+    font-weight: 500;
+    transition: background 0.2s;
+    box-shadow: 0 2px 6px rgba(42,77,124,0.07);
+}
+.footer-repo-btn:hover {
+    background: #1a2644;
+}
+
+nav a.active {
+    color: #fff;
+    background: #2a4d7c;
+    border-radius: 15px;
+    padding: 0.28em 0.9em;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+@media (max-width: 767px) {
+    #toTopBtn {
+        width: 42px;
+        height: 42px;
+        font-size: 1.4rem;
+        bottom: 36px;
+        right: 14px;
+    }
+}
+
 @media (max-width: 1023px) {
     main {
         max-width: 730px;
@@ -423,5 +512,14 @@ footer a {
         font-size: 1.6rem;
         margin-bottom: 1.2rem;
         margin-left: 0.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-main {
+        flex-direction: column;
+        gap: 0.7rem;
+        align-items: flex-start;
+        padding: 0 0.7rem;
     }
 }

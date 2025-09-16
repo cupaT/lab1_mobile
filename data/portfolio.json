@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Приложение погоды на Java",
+    "image": "images/project_weather.jpg",
+    "alt": "WeatherApp",
+    "description": "Приложение с прогнозом погоды на Java с использованием API.",
+    "link": "https://github.com/cupaT/WeatherApp"
+  },
+  {
+    "title": "Интерактивный гид по странам мира",
+    "image": "images/project_guide.jpg",
+    "alt": "Гид по странам",
+    "description": "Веб-приложение для изучения стран, их флагов и фактов.",
+    "link": "https://github.com/cupaT/semestrovaya_JS"
+  },
+  {
+    "title": "Telegram-бот справочник",
+    "image": "images/project_telegram.jpg",
+    "alt": "Telegram-бот",
+    "description": "Бот для путешественников с быстрым поиском информации.",
+    "link": "https://github.com/cupaT/semestrovaya_Py"
+  }
+]
