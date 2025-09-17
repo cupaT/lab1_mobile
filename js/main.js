@@ -120,7 +120,6 @@ $(function() {
                 }
             }
         }
-
         $('nav a').removeClass('active');
         $(`nav a[href="${currentSection}"]`).addClass('active');
     });

@@ -615,7 +615,6 @@ nav a.active {
     }
 }
 
-
 @media (max-width: 1023px) {
     .skills-list {
         gap: 1rem;
