@@ -126,4 +126,61 @@ $(function() {
     });
 
     $(window).trigger('scroll');
+
+    function getSlidesToShow() {
+        const w = $(window).width();
+        if (w < 768) return 1;
+        if (w < 1024) return 2;
+        return 3;
+    }
+
+    let skillsCurrent = 0;
+    let skillsAutoScroll;
+    let slidesToShow = getSlidesToShow();
+    const $skillsList = $('.skills-list');
+    const $skillsCards = $skillsList.children('.skill-card');
+    const totalSkills = $skillsCards.length;
+
+    function updateSkillsCarousel() {
+        slidesToShow = getSlidesToShow();
+        const cardWidth = $skillsCards.outerWidth(true);
+        const gap = parseInt($skillsList.css('gap')) || 0;
+        const offset = (cardWidth + gap) * skillsCurrent;
+        $skillsList.css('transform', `translateX(-${offset}px)`);
+    }
+
+    function showSkillSlide(idx) {
+        slidesToShow = getSlidesToShow();
+        const maxIndex = Math.max(0, totalSkills - slidesToShow);
+        if (idx < 0) idx = maxIndex;
+        if (idx > maxIndex) idx = 0;
+        skillsCurrent = idx;
+        updateSkillsCarousel();
+    }
+
+    $('.skills-prev').on('click', function() {
+        showSkillSlide(skillsCurrent - 1);
+        restartSkillsAuto();
+    });
+    $('.skills-next').on('click', function() {
+        showSkillSlide(skillsCurrent + 1);
+        restartSkillsAuto();
+    });
+
+    function startSkillsAuto() {
+        skillsAutoScroll = setInterval(function() {
+            showSkillSlide(skillsCurrent + 1);
+        }, 3500);
+    }
+    function restartSkillsAuto() {
+        clearInterval(skillsAutoScroll);
+        startSkillsAuto();
+    }
+
+    $(window).on('resize', function() {
+        showSkillSlide(skillsCurrent);
+    });
+
+    showSkillSlide(0);
+    startSkillsAuto();
 });

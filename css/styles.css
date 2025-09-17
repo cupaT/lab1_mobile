@@ -394,6 +394,97 @@ nav a.active {
     transition: background 0.2s;
 }
 
+.skills-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+.skills-list-wrapper {
+    overflow: hidden;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.skills-list {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.5s cubic-bezier(.4,.2,.3,1);
+    will-change: transform;
+}
+
+.skills-prev,
+.skills-next {
+    background: #2a4d7c;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(42,77,124,0.10);
+}
+.skills-prev:hover, .skills-next:hover {
+    background: #163056;
+}
+
+.skills-list {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.5s cubic-bezier(.4,.2,.3,1);
+    will-change: transform;
+}
+
+.skill-card {
+    background: #e6eefc;
+    padding: 1.4rem 1rem 1.4rem 1rem;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(42,77,124,0.05);
+    min-width: 180px;
+    max-width: 210px;
+    width: 200px;
+    margin: 0;
+    flex: 0 0 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-card span {
+    font-size: 1.18rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+}
+
+.skill-card .bar {
+    width: 88%;
+    height: 11px;
+    background: #cfd8dc;
+    border-radius: 6px;
+    margin: 0.7rem 0 0.7rem 0;
+    position: relative;
+}
+
+.skill-card .bar div {
+    height: 100%;
+    background: #2a4d7c;
+    border-radius: 6px;
+    transition: width 0.4s;
+}
+
+.skill-card .level {
+    color: #163056;
+    font-size: 1.07rem;
+    font-weight: 700;
+    margin-top: 0.7rem;
+}
+
 @media (max-width: 767px) {
     #toTopBtn {
         width: 42px;
@@ -521,5 +612,27 @@ nav a.active {
         gap: 0.7rem;
         align-items: flex-start;
         padding: 0 0.7rem;
+    }
+}
+
+
+@media (max-width: 1023px) {
+    .skills-list {
+        gap: 1rem;
+    }
+    .skills-prev, .skills-next {
+        width: 38px;
+        height: 38px;
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 767px) {
+    .skills-carousel {
+        gap: 0.6rem;
+    }
+    .skills-prev, .skills-next {
+        width: 32px;
+        height: 32px;
+        font-size: 1.1rem;
     }
 }
