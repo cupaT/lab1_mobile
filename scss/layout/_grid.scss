@@ -1,0 +1,12 @@
+@use '../utils/mixins' as *;
+
+.grid {
+  @include grid-container(2, 1.5rem);
+
+  @include respond(tablet) {
+    @include grid-container(2, 1rem);
+  }
+  @include respond(mobile) {
+    @include grid-container(1, 0.8rem);
+  }
+}

@@ -1,10 +1,28 @@
 {
   "name": "mobile",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "packageManager": "yarn@4.9.2",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "sass --watch scss/main.scss dist/css/main.css --style=expanded --embed-source-map",
+    "build": "sass scss/main.scss dist/css/main.css --style=compressed && postcss dist/css/main.css -o dist/css/main.css",
+    "lint:css": "stylelint \"scss/**/*.scss\"",
+    "lint:css:fix": "stylelint \"scss/**/*.scss\" --fix",
+    "scss": "sass scss/main.scss dist/css/main.css --no-source-map --style=compressed",
+    "scss:watch": "sass scss/main.scss dist/css/main.css --watch"
   },
-  "private": true
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.93.2",
+    "stylelint": "^16.24.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^39.0.0",
+    "stylelint-config-standard-scss": "^16.0.0",
+    "stylelint-scss": "^6.12.1"
+  },
+  "browserslist": [
+    "defaults",
+    ">0.5%",
+    "not dead"
+  ]
 }

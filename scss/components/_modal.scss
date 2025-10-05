@@ -1,0 +1,70 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  align-items: center;
+  justify-content: center;
+
+  &.modal--open {
+    display: flex;
+  }
+
+  &__overlay {
+    position: absolute;
+    left:0; top:0;
+    width:100vw; height:100vh;
+    background: var(--color-bg-modal-overlay);
+    z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    background: var(--color-bg-modal);
+    border-radius: $radius-modal;
+    box-shadow: var(--shadow-modal);
+    padding: 2.5rem 2rem 2rem 2rem;
+    z-index: 2;
+    width: 430px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  &__close {
+    position: absolute;
+    top: 1.2rem; right: 1.2rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-primary);
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  &__form {
+    label {
+      display: block;
+      margin-bottom: 1.2rem;
+      font-size: 1.07rem;
+      color: var(--color-text);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.3rem;
+      border: 1px solid var(--color-bg-bar);
+      border-radius: 6px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    button[type="submit"] {
+      margin-top: 0.8rem;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@use 'variables' as *;
+
+// Миксин для медиа-запросов по брейкпоинтам
+@mixin respond($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: #{$breakpoint-mobile}) { @content; }
+  }
+  @else if $breakpoint == tablet {
+    @media (min-width: #{$breakpoint-mobile + 1}) and (max-width: #{$breakpoint-tablet}) { @content; }
+  }
+  @else if $breakpoint == desktop {
+    @media (min-width: #{$breakpoint-desktop}) { @content; }
+  }
+}
+
+// Миксин для центрирования flex
+@mixin flex-center($direction: row, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+// Миксин для grid-контейнера
+@mixin grid-container($columns, $gap: 1.5rem) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+// Миксин для box-shadow
+@mixin main-shadow {
+  box-shadow: $shadow-main;
+}
+
+// Миксин для BEM-кнопки
+@mixin button-states($bg, $bg-hover, $color: $color-text-on-primary) {
+  background: $bg;
+  color: $color;
+  transition: background $transition-btn;
+
+  &:hover, &:focus {
+    background: $bg-hover;
+  }
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+

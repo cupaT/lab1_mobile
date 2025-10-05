@@ -1,0 +1,63 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.footer {
+  background: var(--color-primary);
+  color: var(--color-text-on-primary);
+  text-align: center;
+  padding: 1.3rem 0;
+  margin-top: 1rem;
+  border-top-left-radius: $radius-footer;
+  border-top-right-radius: $radius-footer;
+  position: relative;
+  min-height: 64px;
+  flex-shrink: 0;
+
+  &__main {
+    @include flex-center(row, 1.5rem);
+    justify-content: flex-start;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    span {
+      font-size: $font-size-footer;
+    }
+  }
+
+  &__repo-btn {
+    color: var(--color-text-on-primary);
+    background: var(--color-primary-dark);
+    text-decoration: none;
+    padding: 0.45em 1.3em;
+    border-radius: 20px;
+    margin-left: 0.5em;
+    font-size: 1.01rem;
+    font-weight: 500;
+    transition: background $transition-main;
+    box-shadow: var(--shadow-btn);
+
+    &:hover {
+      background: #1a2644;
+    }
+  }
+
+  nav {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      color: var(--color-text-on-primary);
+      text-decoration: underline;
+    }
+  }
+
+  @include respond(mobile) {
+    &__main {
+      flex-direction: column;
+      gap: 0.7rem;
+      align-items: flex-start;
+      padding: 0 0.7rem;
+    }
+  }
+}

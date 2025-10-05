@@ -1,0 +1,41 @@
+@use '../utils/variables' as *;
+
+.to-top-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 128px;
+  z-index: 100;
+  background: $color-primary;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: $shadow-btn-to-top;
+  transition: opacity 0.3s, visibility 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  &:hover {
+    background: $color-primary-dark;
+  }
+}
+
+@media (max-width: 767px) {
+  .to-top-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 1.4rem;
+    bottom: 36px;
+    right: 14px;
+  }
+}

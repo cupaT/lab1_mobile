@@ -1,0 +1,39 @@
+.to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 32px;
+  right: 128px;
+  z-index: 100;
+  background: #2a4d7c;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(42, 77, 124, 0.14);
+  transition: opacity 0.3s, visibility 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+.to-top-btn--visible {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+.to-top-btn:hover {
+  background: #163056;
+}
+
+@media (max-width: 767px) {
+  .to-top-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 1.4rem;
+    bottom: 36px;
+    right: 14px;
+  }
+}
+
+/*# sourceMappingURL=to-top-btn.css.map */

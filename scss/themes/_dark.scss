@@ -1,0 +1,30 @@
+[data-theme="dark"] {
+  --color-primary: #2a4d7c;
+  --color-primary-dark: #1a2644;
+
+  --color-bg: #181c20;
+  --color-bg-light: #232a35;
+  --color-bg-hero: #223049;
+  --color-bg-portfolio: #232a35;
+  --color-bg-modal: #232a35;
+  --color-bg-card: #1b2028;
+  --color-bg-bar: #34405c;
+  --color-bg-modal-overlay: rgba(20, 50, 110, 0.40);
+
+  --color-text: #f6f8fa;
+  --color-text-on-primary: #fff;
+
+  --color-text-accent: #8db3ff;
+  --color-text-accent-dark: #b3cfff;
+  --color-skill-level: #8db3ff;
+
+  --color-success: #00d66b;
+
+  --shadow-main: 0 2px 8px rgba(0,0,0,0.18);
+  --shadow-hero: 0 2px 12px rgba(40,70,120,0.14);
+  --shadow-card: 0 2px 8px rgba(40,70,120,0.13);
+  --shadow-card-portfolio: 0 2px 12px rgba(40,70,120,0.14);
+  --shadow-modal: 0 2px 20px rgba(40,70,120,0.30);
+  --shadow-btn: 0 2px 6px rgba(40,70,120,0.13);
+  --shadow-btn-to-top: 0 2px 8px rgba(40,70,120,0.24);
+}

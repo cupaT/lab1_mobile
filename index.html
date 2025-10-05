@@ -1,139 +1,141 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио — Ревенко Данилы</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио — Ревенко Данилы</title>
+  <link rel="stylesheet" href="dist/css/main.css">
 </head>
 <body>
-<header id="header">
-    <div class="logo">
-        <img src="images/avatar.jpg" alt="Avatar" />
-        <span>Ревенко Данила</span>
-    </div>
-    <button class="burger" aria-label="Открыть меню">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    <nav>
-        <ul>
-            <li><a href="#about">О себе</a></li>
-            <li><a href="#skills">Навыки</a></li>
-            <li><a href="#portfolio">Портфолио</a></li>
-            <li><a href="#contacts">Контакты</a></li>
-        </ul>
-    </nav>
+<header class="header">
+  <div class="header__logo logo">
+    <img src="images/avatar.jpg" alt="Avatar" />
+    <span>Ревенко Данила</span>
+  </div>
+  <button class="header__burger burger" aria-label="Открыть меню">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <button id="themeToggleBtn" class="button button--circle" title="Тема">🌙</button>
+  <nav class="header__nav">
+    <ul class="header__nav-list">
+      <li><a href="#about" class="header__nav-link">О себе</a></li>
+      <li><a href="#skills" class="header__nav-link">Навыки</a></li>
+      <li><a href="#portfolio" class="header__nav-link">Портфолио</a></li>
+      <li><a href="#contacts" class="header__nav-link">Контакты</a></li>
+    </ul>
+  </nav>
 </header>
-<section id="hero">
-    <div class="hero-content">
-        <h1>Привет, я — Ревенко Данила</h1>
-        <p>Студент группы ФИТ-231</p>
-        <a class="hero-btn" href="#portfolio">Смотреть работы</a>
-    </div>
+<section id="hero" class="hero">
+  <div class="hero__content">
+    <h1>Привет, я — Ревенко Данила</h1>
+    <p>Студент группы ФИТ-231</p>
+    <a class="button button--primary hero__btn" href="#portfolio">Смотреть работы</a>
+  </div>
 </section>
 
 <main>
-    <section id="about">
-        <h2>О себе</h2>
-        <p>Я студент группы ФИТ-231, увлекаюсь программированием, веб-разработкой и мобильной разработкой!.</p>
-        <ul>
-            <li>Закончил школу №78</li>
-            <li>Живу в Кемерово</li>
-            <li>Сейчас учусь в КемГУ</li>
-        </ul>
-    </section>
-    <section id="skills">
-        <h2>Навыки</h2>
-        <div class="skills-carousel">
-            <button class="skills-prev" aria-label="Назад">&#8592;</button>
-            <div class="skills-list-wrapper">
-                <div class="skills-list">
-                    <div class="skill-card">
-                        <span>HTML</span>
-                        <div class="bar"><div style="width:70%"></div></div>
-                        <span class="level">Высокий</span>
-                    </div>
-                    <div class="skill-card">
-                        <span>JavaScript</span>
-                        <div class="bar"><div style="width:75%"></div></div>
-                        <span class="level">Высокий</span>
-                    </div>
-                    <div class="skill-card">
-                        <span>Python</span>
-                        <div class="bar"><div style="width:95%"></div></div>
-                        <span class="level">Продвинутый</span>
-                    </div>
-                    <div class="skill-card">
-                        <span>Java</span>
-                        <div class="bar"><div style="width:60%"></div></div>
-                        <span class="level">Средний</span>
-                    </div>
-                    <div class="skill-card">
-                        <span>SQL</span>
-                        <div class="bar"><div style="width:65%"></div></div>
-                        <span class="level">Средний</span>
-                    </div>
-                    <div class="skill-card">
-                        <span>Git</span>
-                        <div class="bar"><div style="width:85%"></div></div>
-                        <span class="level">Продвинутый</span>
-                    </div>
-                </div>
-            </div>
-            <button class="skills-next" aria-label="Вперед">&#8594;</button>
+  <section id="about" class="about">
+    <h2>О себе</h2>
+    <p>Я студент группы ФИТ-231, увлекаюсь программированием, веб-разработкой и мобильной разработкой!.</p>
+    <ul>
+      <li>Закончил школу №78</li>
+      <li>Живу в Кемерово</li>
+      <li>Сейчас учусь в КемГУ</li>
+    </ul>
+  </section>
+  <section id="skills" class="skills">
+    <h2>Навыки</h2>
+    <div class="skills-carousel">
+      <button class="button button--circle skills-prev" aria-label="Назад">&#8592;</button>
+      <div class="skills-list-wrapper">
+        <div class="skills__list">
+          <div class="skill-card">
+            <span>HTML</span>
+            <div class="bar"><div style="width:70%"></div></div>
+            <span class="level">Высокий</span>
+          </div>
+          <div class="skill-card">
+            <span>JavaScript</span>
+            <div class="bar"><div style="width:75%"></div></div>
+            <span class="level">Высокий</span>
+          </div>
+          <div class="skill-card">
+            <span>Python</span>
+            <div class="bar"><div style="width:95%"></div></div>
+            <span class="level">Продвинутый</span>
+          </div>
+          <div class="skill-card">
+            <span>Java</span>
+            <div class="bar"><div style="width:60%"></div></div>
+            <span class="level">Средний</span>
+          </div>
+          <div class="skill-card">
+            <span>SQL</span>
+            <div class="bar"><div style="width:65%"></div></div>
+            <span class="level">Средний</span>
+          </div>
+          <div class="skill-card">
+            <span>Git</span>
+            <div class="bar"><div style="width:85%"></div></div>
+            <span class="level">Продвинутый</span>
+          </div>
         </div>
-    </section>
+      </div>
+      <button class="button button--circle skills-next" aria-label="Вперед">&#8594;</button>
+    </div>
+  </section>
 
-    <section id="portfolio">
-        <h2>Портфолио</h2>
-        <div class="portfolio-list"></div>
-    </section>
+  <section id="portfolio" class="portfolio">
+    <h2>Портфолио</h2>
+    <div class="portfolio__list"></div>
+  </section>
 
-    <section id="contacts">
-        <h2>Контакты</h2>
-        <ul>
-            <li>Email: <a href="mailto:danilrev@ya.ru">danilrev@ya.ru</a></li>
-            <li>Телефон: <a href="tel:+71234567890">+7 (123) 456-78-90</a></li>
-            <li>GitHub: <a href="https://github.com/cupaT" target="_blank">cupaT</a></li>
-        </ul>
-        <button id="openContactModal" class="hero-btn" type="button" style="margin-top:1rem;">Обратная связь</button>
-    </section>
+  <section id="contacts" class="contacts">
+    <h2>Контакты</h2>
+    <ul>
+      <li>Email: <a href="mailto:danilrev@ya.ru">danilrev@ya.ru</a></li>
+      <li>Телефон: <a href="tel:+71234567890">+7 (123) 456-78-90</a></li>
+      <li>GitHub: <a href="https://github.com/cupaT" target="_blank">cupaT</a></li>
+    </ul>
+    <button id="openContactModal" class="button button--primary contacts__btn" type="button" style="margin-top:1rem;">Обратная связь</button>
+  </section>
 </main>
 
-<footer>
-    <div class="footer-main">
-        <span>Ревенко Данила, ФИТ-231, 2025</span>
-        <a href="https://github.com/cupaT/lab1_mobile" target="_blank" class="footer-repo-btn">Репозиторий</a>
-    </div>
+<footer class="footer">
+  <div class="footer__main">
+    <span>Ревенко Данила, ФИТ-231, 2025</span>
+    <a href="https://github.com/cupaT/lab1_mobile" target="_blank" class="footer__repo-btn button button--secondary">Репозиторий</a>
+  </div>
 </footer>
-<button id="toTopBtn" title="Вверх">&#8679;</button>
+<button id="toTopBtn" class="button button--circle to-top-btn" title="Вверх">&#8679;</button>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="js/main.js"></script>
-</body>
+
 <div class="modal" id="contactModal">
-    <div class="modal-overlay"></div>
-    <div class="modal-content">
-        <button class="modal-close" aria-label="Закрыть">&times;</button>
-        <h2>Обратная связь</h2>
-        <form id="feedbackForm">
-            <label>
-                Имя:<br>
-                <input type="text" name="name" required autocomplete="off">
-            </label>
-            <label>
-                Email:<br>
-                <input type="email" name="email" required autocomplete="off">
-            </label>
-            <label>
-                Сообщение:<br>
-                <textarea name="message" rows="3" required></textarea>
-            </label>
-            <button type="submit">Отправить</button>
-        </form>
-        <div class="form-success"></div>
-        <div class="form-error"> </div>
-    </div>
+  <div class="modal__overlay"></div>
+  <div class="modal__content">
+    <button class="modal__close" aria-label="Закрыть">&times;</button>
+    <h2>Обратная связь</h2>
+    <form id="feedbackForm" class="modal__form">
+      <label>
+        Имя:<br>
+        <input type="text" name="name" required autocomplete="off">
+      </label>
+      <label>
+        Email:<br>
+        <input type="email" name="email" required autocomplete="off">
+      </label>
+      <label>
+        Сообщение:<br>
+        <textarea name="message" rows="3" required></textarea>
+      </label>
+      <button type="submit" class="button button--primary">Отправить</button>
+    </form>
+    <div class="form-success"></div>
+    <div class="form-error"></div>
+  </div>
 </div>
+</body>
 </html>

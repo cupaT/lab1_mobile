@@ -1,0 +1,40 @@
+@use '../utils/variables' as *;
+
+a {
+  color: var(--color-text-accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  &:hover, &:focus {
+    color: var(--color-text-accent-dark);
+    outline: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-accent);
+  font-family: $font-stack;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.7rem;
+  font-weight: bold;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+p {
+  margin-bottom: 1em;
+  font-size: 1.08rem;
+}
+
+ul, ol {
+  padding-left: 1.3em;
+  margin-bottom: 1em;
+}
